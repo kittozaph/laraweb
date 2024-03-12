@@ -10,24 +10,6 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("Clients") }}
-                    <?php
-                    // Fetch client data from the database
-                    $clients = App\Models\Client::all();
-
-                    // Loop through each client and display their information
-                    foreach ($clients as $client) {
-                        echo "<div class='card mt-6'>";
-                        echo "<div class='card-header'>";
-                        echo "<h2 class='card-title'>" . $client->name . "</h2>";
-                        echo "</div>";
-                        echo "<div class='card-body'>";
-                        echo "<p>Email: " . $client->email . "</p>";
-                        echo "<p>Phone: " . $client->phone . "</p>";
-                        echo "<p>Address: " . $client->address . "</p>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                    ?>
                 </div>
             </div>
         </div>
